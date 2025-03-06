@@ -1,5 +1,5 @@
 # DUDE - Disk Usage & Data Explorer
-*this project is not yet completed!*
+***this project is not yet completed!***
 
 The purpose of this tool is to analyse disk usage and to see stats about specific directories.
 
