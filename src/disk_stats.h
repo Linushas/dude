@@ -9,6 +9,6 @@ typedef struct dStats
     char path[64];
 } DStats;
 
-int getDiskUsage(DStats *ds, const char *path);
+int getDiskUsage(DStats *ds);
 
 #endif

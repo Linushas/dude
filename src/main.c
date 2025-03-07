@@ -21,7 +21,7 @@ int main(int argc, char **argv)
         state = STATE_SPE_DIR;
         strcpy(ds.path, argv[1]);
     } 
-    getDiskUsage(&ds, argv[1]);
+    getDiskUsage(&ds);
     
     if(!initInterface()) return 1;
     updateInterface(state, ds);

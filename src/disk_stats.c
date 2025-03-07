@@ -2,11 +2,11 @@
 #include "disk_stats.h"
 #include "interface.h"
 
-int getDiskUsage(DStats *ds, const char *path)
+int getDiskUsage(DStats *ds)
 {
     struct statvfs stat;
 
-    if(statvfs(path, &stat) != 0) 
+    if(statvfs(ds->path, &stat) != 0) 
     {
         return 0;
     }

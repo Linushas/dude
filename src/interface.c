@@ -62,10 +62,10 @@ void updateInterface(int state, DStats ds)
     //printFrame(mx, my);
     switch(state) {
         case STATE_STANDARD:
-            mvprintw(mx/2 -2, my/2 - 30, "Path: %s", ds.path);
-            mvprintw(mx/2 -1, my/2 - 30, "Total: %lu", ds.total);
-            mvprintw(mx/2, my/2 - 30, "Free: %lu", ds.free);
-            mvprintw(mx/2 +1, my/2 - 30, "Available: %lu", ds.available);
+            mvprintw(mx/2 -2, my/2 - 30, "Path:\t%s", ds.path);
+            mvprintw(mx/2 -1, my/2 - 30, "Total:\t%.3f GB", (float)ds.total / (1024.0 * 1024.0 * 1024.0));
+            mvprintw(mx/2, my/2 - 30, "Free:\t%.3f GB", (float)ds.free / (1024.0 * 1024.0 * 1024.0));
+            mvprintw(mx/2 +1, my/2 - 30, "Available:\t%.3f GB", (float)ds.available / (1024.0 * 1024.0 * 1024.0));
             break;
         case STATE_SPE_DIR:
             mvprintw(mx/2 -2, my/2 - 30, "Path: %s", ds.path);
