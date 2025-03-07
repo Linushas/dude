@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdbool.h": "c",
+        "interface.h": "c",
+        "disk_stats.h": "c"
+    }
+}

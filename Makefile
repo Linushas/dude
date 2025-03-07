@@ -1,7 +1,7 @@
 # Variables
 CC = gcc
 CFLAGS = -lncurses
-SRC = src/main.c
+SRC = src/main.c src/interface.c src/disk_stats.c
 OUT = dude
 INSTALL_DIR = /usr/local/bin
 
