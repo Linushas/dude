@@ -3,5 +3,6 @@
         "stdbool.h": "c",
         "interface.h": "c",
         "disk_stats.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

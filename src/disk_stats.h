@@ -5,10 +5,12 @@ typedef struct dStats
 {
     unsigned long total;
     unsigned long free;
+    unsigned long used;
     unsigned long available;
-    char path[64];
+    char path[1024];
 } DStats;
 
+long getDirectorySize(const char *path);
 int getDiskUsage(DStats *ds);
 
 #endif

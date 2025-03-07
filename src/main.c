@@ -12,16 +12,26 @@ int main(int argc, char **argv)
     int active = true;
     int state = STATE_STANDARD;
     DStats ds = {.path = "/"};
-    if(argc > 1) {
+    if(argc > 1) 
+    {
         /*if(!isValidPath(argv[1]))           --              TODO!
         {
             printf("%s is not a valid path\n", argv[1]);
             return 1;
         }*/
         state = STATE_SPE_DIR;
+        ds.used = getDirectorySize(argv[1]);
+        ds.available = 0;
+        ds.free = 0;
+        ds.total = 0;
         strcpy(ds.path, argv[1]);
     } 
-    getDiskUsage(&ds);
+    else 
+    {
+        state = STATE_STANDARD;
+        getDiskUsage(&ds);
+    }
+    
     
     if(!initInterface()) return 1;
     updateInterface(state, ds);
